@@ -7,7 +7,6 @@ let closebtn = document.querySelector("#close");
 let form = document.querySelector(".form_div");
 let formContainer = document.querySelector(".form-zero");
 let newForm = form.cloneNode(true);
-send.href = "#form";
 function handleSend() {
   formContainer.style.display = "block";
   formContainer.appendChild(newForm);

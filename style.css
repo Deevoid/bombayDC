@@ -246,6 +246,16 @@ header .line {
   background: #3971b1;
   line-height: 1.6;
   color: #ffffff !important;
+  -webkit-transition: background 400ms;
+  transition: background 400ms;
+  -webkit-box-shadow: 0 5px 15px rgba(32, 41, 83, 0.15), 0 15px 40px rgba(45, 83, 254, 0.2);
+          box-shadow: 0 5px 15px rgba(32, 41, 83, 0.15), 0 15px 40px rgba(45, 83, 254, 0.2);
+}
+
+.form-zero .form_div form button:hover {
+  background: #fff;
+  color: #3971b1 !important;
+  border: solid 1px #3971b1;
 }
 
 .main_div {
@@ -362,6 +372,16 @@ header .line {
   background: #3971b1;
   line-height: 1.6;
   color: #ffffff !important;
+  -webkit-transition: background 400ms;
+  transition: background 400ms;
+  -webkit-box-shadow: 0 5px 15px rgba(32, 41, 83, 0.15), 0 15px 40px rgba(45, 83, 254, 0.2);
+          box-shadow: 0 5px 15px rgba(32, 41, 83, 0.15), 0 15px 40px rgba(45, 83, 254, 0.2);
+}
+
+.main_div .form_div form button:hover {
+  background: #fff;
+  color: #3971b1 !important;
+  border: solid 1px #3971b1;
 }
 
 .main_div .description_div {
@@ -401,6 +421,8 @@ header .line {
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
+  -webkit-box-shadow: 0 5px 15px rgba(32, 41, 83, 0.15), 0 15px 40px rgba(45, 83, 254, 0.2);
+          box-shadow: 0 5px 15px rgba(32, 41, 83, 0.15), 0 15px 40px rgba(45, 83, 254, 0.2);
 }
 
 .main_div .description_div .sales,
@@ -530,6 +552,16 @@ footer .footer_wrapper .email button {
   border: none;
   color: #ffffff;
   font-size: 1rem;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+  -webkit-box-shadow: 0 5px 15px rgba(32, 41, 83, 0.15), 0 15px 40px rgba(45, 83, 254, 0.2);
+          box-shadow: 0 5px 15px rgba(32, 41, 83, 0.15), 0 15px 40px rgba(45, 83, 254, 0.2);
+}
+
+footer .footer_wrapper .email button:hover {
+  background: #fff;
+  color: #3971b1 !important;
+  border: solid 1px #3971b1;
 }
 
 footer .footer_wrapper .to_top {
