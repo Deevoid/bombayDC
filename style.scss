@@ -1,12 +1,18 @@
 @import "./global";
 $value: calc(100% + 100px);
+
+@font-face {
+  font-family: MuseoSlab;
+  src: url("./Museo_Slab_300.otf");
+}
 body {
+  font-family: MuseoSlab;
   overflow-x: hidden;
   position: relative;
-  background: url(./assets/map.svg);
-  background-position: 60px top;
-  background-repeat: no-repeat;
-  background-size: 600px 500px;
+  // background: url(./assets/map.svg);
+  // background-position: 60px top;
+  // background-repeat: no-repeat;
+  // background-size: 600px 500px;
 }
 .container {
   width: 90%;
@@ -15,6 +21,16 @@ body {
 .container-fluid {
   width: 100%;
   margin: 0 auto;
+}
+.mapbg {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: -260px;
+  z-index: -1;
+  img {
+    height: 500px;
+  }
 }
 
 header {
@@ -79,16 +95,17 @@ header {
   .form_div {
     display: block;
     padding: 1rem;
-    margin-top: 3rem;
+    margin-top: 7rem;
     h2 {
       color: #3971b1;
+      display: none;
     }
     form {
       display: flex;
       flex-direction: column;
       :nth-child(n) {
         font-size: 1rem;
-        padding-left: 1rem;
+        padding-left: 0.4rem;
         display: inline-block;
         margin-bottom: 2rem;
         height: 40px;
@@ -118,7 +135,8 @@ header {
       }
       button {
         width: 100%;
-        height: 45px;
+        margin-top: 2rem !important;
+        height: 55px !important;
         background: #3971b1;
         line-height: 1.6;
         color: #ffffff !important;
@@ -294,7 +312,7 @@ footer {
       font-weight: 600;
       width: 88px;
       height: 39px;
-      margin: 0 auto;
+      margin: 3rem auto;
       background: #e4e4e4;
       display: flex;
       align-items: center;
@@ -382,9 +400,23 @@ footer {
 }
 
 @media (min-width: 768px) {
-  body {
-    background-position: $value top;
-    background-size: 600px 400px;
+  // body {
+  //   background-position: $value top;
+  //   background-size: 600px 400px;
+  // }
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .mapbg {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0px;
+    z-index: -1;
+    img {
+      height: 450px;
+    }
   }
   header {
     .header_container {
@@ -394,6 +426,9 @@ footer {
       .nav_list {
         display: block;
       }
+    }
+    .line {
+      width: 70%;
     }
   }
   footer {

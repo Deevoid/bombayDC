@@ -73,13 +73,15 @@ footer {
       flex-shrink: 0;
 }
 
+@font-face {
+  font-family: MuseoSlab;
+  src: url("./Museo_Slab_300.otf");
+}
+
 body {
+  font-family: MuseoSlab;
   overflow-x: hidden;
   position: relative;
-  background: url(./assets/map.svg);
-  background-position: 60px top;
-  background-repeat: no-repeat;
-  background-size: 600px 500px;
 }
 
 .container {
@@ -90,6 +92,18 @@ body {
 .container-fluid {
   width: 100%;
   margin: 0 auto;
+}
+
+.mapbg {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  right: -260px;
+  z-index: -1;
+}
+
+.mapbg img {
+  height: 500px;
 }
 
 header {
@@ -176,11 +190,12 @@ header .line {
 .form-zero .form_div {
   display: block;
   padding: 1rem;
-  margin-top: 3rem;
+  margin-top: 7rem;
 }
 
 .form-zero .form_div h2 {
   color: #3971b1;
+  display: none;
 }
 
 .form-zero .form_div form {
@@ -195,7 +210,7 @@ header .line {
 
 .form-zero .form_div form :nth-child(n) {
   font-size: 1rem;
-  padding-left: 1rem;
+  padding-left: 0.4rem;
   display: inline-block;
   margin-bottom: 2rem;
   height: 40px;
@@ -242,7 +257,8 @@ header .line {
 
 .form-zero .form_div form button {
   width: 100%;
-  height: 45px;
+  margin-top: 2rem !important;
+  height: 55px !important;
   background: #3971b1;
   line-height: 1.6;
   color: #ffffff !important;
@@ -490,7 +506,7 @@ footer .footer_wrapper .logo {
   font-weight: 600;
   width: 88px;
   height: 39px;
-  margin: 0 auto;
+  margin: 3rem auto;
   background: #e4e4e4;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -609,15 +625,28 @@ footer .copyright_wrapper .copyright {
 }
 
 @media (min-width: 768px) {
-  body {
-    background-position: calc(100% + 100px) top;
-    background-size: 600px 400px;
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+  .mapbg {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    right: 0px;
+    z-index: -1;
+  }
+  .mapbg img {
+    height: 450px;
   }
   header .header_container svg {
     display: none;
   }
   header .header_container .nav_list {
     display: block;
+  }
+  header .line {
+    width: 70%;
   }
   footer .footer_wrapper {
     -ms-grid-columns: (1fr)[4];
